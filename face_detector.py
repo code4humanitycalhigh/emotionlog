@@ -47,10 +47,10 @@ def track_emotions(training_model):
             # find max indexed array
             max_index = np.argmax(predictions[0])
 
-            emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
+            emotions = ('Angry', 'Disgust', 'Fear', 'Happy', 'Sad', 'Surprise', 'Neutral')
             predicted_emotion = emotions[max_index]
             lst.append(predicted_emotion)
-            cv2.putText(test_img, predicted_emotion, (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
+            #cv2.putText(test_img, predicted_emotion, (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
         resized_img = cv2.resize(test_img, (1000, 700))
         cv2.imshow('Facial emotion analysis ', resized_img)
@@ -64,8 +64,8 @@ def track_emotions(training_model):
     d={}
     emotions = ['angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral']
     for i in emotions:
-        d[i]=round(lst.count(i)/len(lst),4)
+        d[i]=round(lst.count(i)/len(lst),2)
     return d
 
 #test
-#print(track_emotions('model1')) #DO NOT INDLUDE .h5, JUST THE MODEL NAME
+print(track_emotions('model1')) #DO NOT INDLUDE .h5, JUST THE MODEL NAME

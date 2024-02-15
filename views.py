@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request, jsonify
-from facial_detector import track_emotions
+from face_detector import track_emotions
 from flask_app import app
 
 @app.route("/",methods=['GET','POST'])
