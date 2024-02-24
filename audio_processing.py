@@ -8,7 +8,8 @@ import keyboard
 from datetime import datetime
 import time
 import io
-def test():
+
+def record():
     go = 1
 
     def quit():
@@ -31,12 +32,12 @@ def test():
             sleep(0.01)
             with mic as source:
                 audio = r.listen(source)
-                #print('go: ',go)
+                print('go: ',go)
                 #print(r.recognize_google(audio))
         except Exception as e:
             print(e)
             pass
-    
+    print('done')
     name = 'log_'+datetime.now().strftime("%m-%d_%H-%M")
     path = 'recordings/'+name+'.wav'
     with open(path,"wb") as file:
@@ -78,5 +79,5 @@ def emotion_detection(text):
 
 
 #print(emotion_detection(wav_to_text("recordings/test2.wav")))
-#print(record_audio())
-test()
+print(record())
+

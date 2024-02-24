@@ -57,7 +57,7 @@ def track_emotions(training_model):
 
         if cv2.waitKey(10) == ord('q'):  # wait until 'q' key is pressed
             break
-
+    
     cap.release()
     cv2.destroyAllWindows
     print(len(lst))
@@ -68,4 +68,4 @@ def track_emotions(training_model):
     return d
 
 #test
-print(track_emotions('model1')) #DO NOT INDLUDE .h5, JUST THE MODEL NAME
+#print(track_emotions('model1')) #DO NOT INDLUDE .h5, JUST THE MODEL NAME
