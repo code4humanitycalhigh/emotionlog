@@ -19,3 +19,7 @@ def index():
 @app.route("/log", methods=["GET","POST"])
 def log():
    return render_template("log.html")
+
+@app.route("/analytics", methods=["GET","POST"])
+def analytics():
+   return render_template("analytics.html")
