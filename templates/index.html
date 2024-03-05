@@ -9,6 +9,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://d3js.org/d3.v5.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+  <link rel="stylesheet" href="{{url_for('static', filename='animation.css')}}">
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -26,15 +33,26 @@
     <h1>Welcome Back, XXXX! Record your thoughts below:</h1>
     <h4>0/1 Logs Recorded Today</h4>
   </header>
-
+  <!-- CODE FOR THE CAMERA SHIT
   <div class="bottom">
     <form action="" method="post">
       <button class="click">Click Here</button>
     </form>
+    <div class="start-stop">
+      <a href="#" id=5 onclick="startCamera()">Start Camera</a>
+      
+    </div>
+    <br>
+    <div id="canvas-parent">
+      <canvas id="drawCanvas"></canvas>
+      <video contrls id="videoElement" onloadeddata="adjustCanvas()"></video>
+      <canvas id="captureCanvas"></canvas>
+    </div>
+  -->
     
   </div>
   
-  <script src="script.js"></script>
+  <script src="{{ url_for('static', filename='index.js') }}"></script>
 </body>
 
 </html>

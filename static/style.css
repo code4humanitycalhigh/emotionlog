@@ -1,255 +1,258 @@
-*, body, html {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: "Nunito", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
-    --dark-purple: rgb(10, 0, 32.5);
-    --lighter-purple: rgb(20, 0, 40);
+*,
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  --dark-purple: rgb(10, 0, 32.5);
+  --lighter-purple: rgb(20, 0, 40);
 }
 
 /* Navbar */
-  
-nav{
-    width: 100%;
-    height: 7vh;
-    color: white;
-    background-color: rgb(0, 0, 80);
-}
-  
-ul{
-    float: right;
-    height: 100%;
-}
-  
-ul li{
-    display: inline;
-    padding-right: 20px;
-    height: 100%;
+
+nav {
+  width: 100%;
+  height: 7vh;
+  color: white;
+  background-color: rgb(0, 0, 80);
 }
 
-ul li a{
-    color: white;
-    padding: 5px;
-    border-radius: 10px;
+ul {
+  float: right;
+  height: 100%;
 }
 
-ul li a:hover{
-    color: black;
-    background-color: white;
-    transition: .25s;
+ul li {
+  display: inline;
+  padding-right: 20px;
+  height: 100%;
 }
 
-.active{
-    background-color: white;
-    color: black;
-    border-radius: 10px;
+ul li a {
+  color: white;
+  padding: 5px;
+  border-radius: 10px;
 }
-  
-.logo{
-    float: left;
-    padding-left: 10px;
+
+ul li a:hover {
+  color: black;
+  background-color: white;
+  transition: 0.25s;
+}
+
+.active {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+}
+
+.logo {
+  float: left;
+  padding-left: 10px;
 }
 
 /* Header Section */
 
-header{
-    height: 35vh;
-    color: white;
-    width: 100%;
-    background: var(--dark-purple);
-    text-align: center;
+header {
+  height: 35vh;
+  color: white;
+  width: 100%;
+  background: var(--dark-purple);
+  text-align: center;
 }
 
-header h1{
-    padding-top: 12.5vh;
-    margin-bottom: 15px;
+header h1 {
+  padding-top: 12.5vh;
+  margin-bottom: 15px;
 }
 
-header h4{
-    font-weight: 100;
-    font-size: 15px;
+header h4 {
+  font-weight: 100;
+  font-size: 15px;
 }
 
 /* Button/Bottom Section */
 
-.bottom{
-    height: 58vh;
-    width: 100%;
-    background-image: url('images/background.jpeg');
-    background-size: cover;
-    display: flex;
+.bottom {
+  height: 58vh;
+  width: 100%;
+  background-image: url("images/background.jpeg");
+  background-size: cover;
+  display: flex;
 }
 
-.click{
-    background-color: white;
-    color: black;
-    font-weight: 400;
-    font-size: 30px;
-    padding: 10px 20px;
-    border-radius: 40px;
-    margin: auto;
-    text-align: center;
-    border: none;
+.click {
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  font-size: 30px;
+  padding: 10px 20px;
+  border-radius: 40px;
+  margin: auto;
+  text-align: center;
+  border: none;
 }
 
-.click:hover{
-    transition: .5s;
-    background: var(--dark-purple);
-    color: white;
+.click:hover {
+  transition: 0.5s;
+  background: var(--dark-purple);
+  color: white;
 }
 
 /* Log Page */
 
-.background{
-    background-color: var(--dark-purple);
+.background {
+  background-color: var(--dark-purple);
 }
 
-.log{
-    width: 90vw;
-    height: 75vh;
-    margin: 30px auto;
-    border: 2px solid white;
-    border-radius: 5px;
-    background: linear-gradient(indigo, var(--dark-purple));
-    color: white;
+.log {
+  width: 90vw;
+  height: 75vh;
+  margin: 30px auto;
+  border: 2px solid white;
+  border-radius: 5px;
+  background: linear-gradient(indigo, var(--dark-purple));
+  color: white;
 }
 
-.top-row{
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
+.top-row {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
 }
 
-.top-row h2{
-    margin-right: 20%;
+.top-row h2 {
+  margin-right: 20%;
 }
 
-.row{
-    border-top: 2px solid lightgray;
-    border-bottom: 2px solid lightgray;
-    width: 90%;
-    margin: auto;
-    height: 8%;
+.row {
+  border-top: 2px solid lightgray;
+  border-bottom: 2px solid lightgray;
+  width: 90%;
+  margin: auto;
+  height: 8%;
 }
 
-.space{
-    width: 90%;
-    margin: auto;
-    height: 8%;
+.space {
+  width: 90%;
+  margin: auto;
+  height: 8%;
 }
 
-.arrows{
-    width: 20%;
-    margin: 0 auto;
-    color: white;
-    font-size: 50px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+.arrows {
+  width: 20%;
+  margin: 0 auto;
+  color: white;
+  font-size: 50px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.left-arrow{
-    margin-right: 20%;
+.left-arrow {
+  margin-right: 20%;
 }
 
-.right-arrow{
-    margin-left: 20%;
+.right-arrow {
+  margin-left: 20%;
 }
 
 /* Charts Page */
 
-body{
-    background-color: var(--dark-purple);
+body {
+  background-color: var(--dark-purple);
 }
 
-.top-row{
-    width: 100%;
-    height: 20vh;
-    color: white;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+.top-row {
+  width: 100%;
+  height: 20vh;
+  color: white;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
 }
 
-.top-row div{
-    width: 15vw;
-    text-align: center;
-    margin: 5px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90%;
-    background-color: var(--lighter-purple);
+.top-row div {
+  width: 15vw;
+  text-align: center;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+  background-color: var(--lighter-purple);
 }
 
-.charts{
-    width: 100%;
-    height: 70vh;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.charts {
+  width: 100%;
+  height: 70vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.chart1{
-    width: 25vw;
-    background-color: var(--lighter-purple);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90%;
+.chart1 {
+  width: 25vw;
+  background-color: var(--lighter-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90%;
 }
 
-.charts-container{
-    width: 70vw;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.charts-container {
+  width: 70vw;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.chart2{
-    height: 50%;
-    background-color: var(--lighter-purple);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 96%;
+.chart2 {
+  height: 50%;
+  background-color: var(--lighter-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
 }
 
-.charts-container-2{
-    height: 47%;
-    margin-top: 3%;
-    width: 96%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.charts-container-2 {
+  height: 47%;
+  margin-top: 3%;
+  width: 96%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.chart3{
-    width: 37%;
-    margin-right: 3%;
-    height: 100%;
-    background-color: var(--lighter-purple);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.chart3 {
+  width: 37%;
+  margin-right: 3%;
+  height: 100%;
+  background-color: var(--lighter-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.chart4{
-    width: 60%;
-    height: 100%;
-    background-color: var(--lighter-purple);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.chart4 {
+  width: 60%;
+  height: 100%;
+  background-color: var(--lighter-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+

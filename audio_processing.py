@@ -10,16 +10,12 @@ import pyaudio
 import wave
 import io
 
-def record():
+def record(index):
 
-    p = pyaudio.PyAudio()
-    info = p.get_host_api_info_by_index(0)
-    numdevices = info.get('deviceCount')
-    for i in range(0, numdevices):
-        if (p.get_device_info_by_host_api_device_index(0, i).get('maxInputChannels')) > 0:
-            print("Input Device id ", i, " - ", p.get_device_info_by_host_api_device_index(0, i)["name"])
-    index=int(input("Choose index: "))
+    
+    
 
+    #index=1 #so its all automated
 
     go = 1
 
@@ -29,7 +25,7 @@ def record():
         nonlocal go
         go = 0
 
-    keyboard.on_press_key("q", lambda _:quit())
+    keyboard.on_press_key("enter", lambda _:quit())
     chunk = 1024  # Record in chunks of 1024 samples
     sample_format = pyaudio.paInt16  # 16 bits per sample
     channels = 2
@@ -94,7 +90,7 @@ def wav_to_text(file_name):
   config = speech.RecognitionConfig(
       encoding=speech.RecognitionConfig.AudioEncoding.LINEAR16,
       enable_automatic_punctuation=True,
-      audio_channel_count=1,
+      audio_channel_count=2,
       language_code="en-US",
   )
 
@@ -111,6 +107,5 @@ def emotion_detection(text):
 
 
 
-#print(emotion_detection(wav_to_text("recordings/test2.wav")))
-#print(record())
+
 
