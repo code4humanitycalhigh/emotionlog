@@ -41,7 +41,7 @@ def record(index):
                     channels=channels,
                     rate=fs,
                     frames_per_buffer=chunk,
-                    input_device_index=index,
+                    #input_device_index=index,
                     input=True)
 
     frames = []  # Initialize array to store frames
