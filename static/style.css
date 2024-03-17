@@ -302,3 +302,13 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+#microphones{
+  background: white;
+  color: black;
+  font-size: 15px;
+  font-family: "Nunito", sans-serif;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 5px;
+}
