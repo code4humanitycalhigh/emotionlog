@@ -61,9 +61,11 @@ function adjustCanvas(bool) {
 
     drawCanvas.width = video.videoWidth || drawCanvas.width;
     //drawCanvas.height = video.videoHeight || drawCanvas.height;
+    drawCanvas.height = 0;
 
     captureCanvas.width = video.videoWidth || captureCanvas.width;
     //captureCanvas.height = video.videoHeight || captureCanvas.height;
+    captureCanvas.height = 0;
 
     drawCtx.lineWidth = "5";
     drawCtx.strokeStyle = "blue";
