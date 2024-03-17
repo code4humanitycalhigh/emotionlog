@@ -1,3 +1,7 @@
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -19,7 +23,7 @@ span.onclick = function() {
 
 document.addEventListener('keydown', function(event){
     if(event.key == 'Enter'){
-        modal.style.display = "none";
+        sleep(500).then(() => { modal.style.display = "none"; });   
     }
 })
 
