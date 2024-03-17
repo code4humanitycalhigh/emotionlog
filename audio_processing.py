@@ -1,6 +1,5 @@
 from google.cloud import speech
 import text2emotion as te
-import speech_recognition as sr
 from time import sleep
 import os
 import keyboard
