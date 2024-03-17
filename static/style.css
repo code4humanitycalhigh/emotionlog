@@ -12,7 +12,7 @@ html {
   font-style: normal;
   --dark-purple: rgb(10, 0, 32.5);
   --lighter-purple: rgb(20, 0, 40);
-  --lilac: 	#4E3283
+  --dark-blue: 	rgb(0, 0, 10);
 }
 
 /* Navbar */
@@ -281,7 +281,7 @@ body {
 
 /* Modal Content */
 .modal-content {
-  background-color: var(--lilac);
+  background-color: var(--dark-blue);
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
