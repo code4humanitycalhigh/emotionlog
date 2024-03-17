@@ -12,6 +12,7 @@ html {
   font-style: normal;
   --dark-purple: rgb(10, 0, 32.5);
   --lighter-purple: rgb(20, 0, 40);
+  --lilac: 	#4E3283
 }
 
 /* Navbar */
@@ -85,6 +86,10 @@ header h4 {
   background-image: url("images/background.jpeg");
   background-size: cover;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
 }
 
 .click {
@@ -93,10 +98,12 @@ header h4 {
   font-weight: 400;
   font-size: 30px;
   padding: 10px 20px;
+  text-align: center;
   border-radius: 40px;
   margin: auto;
   text-align: center;
   border: none;
+  margin: 30px;
 }
 
 .click:hover {
@@ -256,3 +263,42 @@ body {
   justify-content: center;
 }
 
+/* Modal window code */
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: var(--lilac);
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}

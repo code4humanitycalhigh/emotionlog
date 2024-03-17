@@ -33,26 +33,39 @@
     <h1>Welcome Back, XXXX! Record your thoughts below:</h1>
     <h4>0/1 Logs Recorded Today</h4>
   </header>
-  <!-- CODE FOR THE CAMERA SHIT
+  <!-- CODE FOR THE CAMERA SHIT -->
   <div class="bottom">
     <form action="" method="post">
-      <button class="click">Click Here</button>
+      <button class="click" id="k">Click Here</button>
     </form>
-    <div class="start-stop">
-      <a href="#" id=5 onclick="startCamera()">Start Camera</a>
-      
-    </div>
-    <br>
-    <div id="canvas-parent">
-      <canvas id="drawCanvas"></canvas>
-      <video contrls id="videoElement" onloadeddata="adjustCanvas()"></video>
-      <canvas id="captureCanvas"></canvas>
-    </div>
-  -->
-    
+ 
+    <button id="modal-opener">Open Modal</button>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="start-stop">
+          <a href="#" id=5 onclick="startCamera()" class="click">Start Camera</a>
+          
+        </div>
+        <br>
+        <div id="canvas-parent">
+          <canvas id="drawCanvas"></canvas>
+          <video contrls id="videoElement" onloadeddata="adjustCanvas()"></video>
+          <canvas id="captureCanvas"></canvas>
+        </div>
+      </div>
+
+    </div>    
   </div>
   
   <script src="{{ url_for('static', filename='index.js') }}"></script>
+  <!-- Script tag for using live server -->
+  <script src="../static/index.js"></script>
+  <script src="../static/modal.js"></script>
 </body>
 
 </html>
