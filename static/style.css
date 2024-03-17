@@ -106,6 +106,20 @@ header h4 {
   margin: 30px;
 }
 
+.start-camera{
+  background-color: white;
+  color: black;
+  font-weight: 400;
+  font-size: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  border-radius: 40px;
+  margin: auto;
+  text-align: center;
+  border: none;
+  margin: 30px;
+}
+
 .click:hover {
   transition: 0.5s;
   background: var(--dark-purple);
