@@ -17,6 +17,12 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
+document.addEventListener('keydown', function(event){
+    if(event.key == 'Enter'){
+        modal.style.display = "none";
+    }
+})
+
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
