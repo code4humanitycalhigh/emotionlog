@@ -10,7 +10,7 @@ import numpy as np
 from keras.models import model_from_json
 import classifier
 
-face_detector = cv2.CascadeClassifier("ml/haarcascade_frontalface_default.xml")
+face_detector = cv2.CascadeClassifier("ml_folder/haarcascade_frontalface_default.xml")
 
 global emotions
 emotions={
@@ -27,8 +27,8 @@ global mic_list
 mic_list=[]
 
 # Load the Model and Weights
-model = model_from_json(open("ml/facial_expression_model_structure.json", "r").read())
-model.load_weights('ml/facial_expression_model_weights.h5')
+model = model_from_json(open("ml_folder/facial_expression_model_structure.json", "r").read())
+model.load_weights('ml_folder/facial_expression_model_weights.h5')
 model.make_predict_function()
 
 
@@ -63,13 +63,18 @@ def analytics():
 @app.route("/start_recording",methods=['GET','POST'])
 def start_recording():
     if request.method=='POST':
+        if request.args.get('ended')=='true':
+            print('yessss22')
         print('started')
         record(1)
         return 'done'
 
+
 @app.route('/uploade', methods=['POST', 'GET'])
 def upload_file():
+    #print("upload_file")
     if request.method == 'POST':
+        print("request=post/uploade")
         # f.save("somefile.jpeg")
         # f = request.files['file']
 
@@ -77,20 +82,28 @@ def upload_file():
         npimg = np.fromstring(f, np.uint8)
         img = cv2.imdecode(npimg, cv2.IMREAD_GRAYSCALE)
         face_properties = classifier.classify(img, face_detector, model)
-        #print(json.dumps(face_properties))
-        #print(face_properties)
-        try:
+        if len(face_properties)>0:
+            print("server: ",face_properties)
             emotions[face_properties[0]['label']].append(int(face_properties[0]['score']))
-        except:
-            pass
+            print(emotions)
+        else:
+            print("empty: ", face_properties)
+        
         return json.dumps(face_properties)
 
 @app.route('/done', methods=['POST', 'GET'])  
 def done():
     if request.method=='POST':
+        print("finished, uploading data to emotions")
         for key in emotions:
-            
-            emotions[key]=round(sum(emotions[key])/len(emotions[key]),2)
+            #print(key)
+            try:
+                emotions[key]=round(sum(emotions[key])/len(emotions[key]),2)
+            except Exception as e:
+                print(e)
+                #print(emotions[key])
+                #print(emotions)
+                print("\n")
         print(emotions)
         return 'done'
 

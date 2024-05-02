@@ -1,6 +1,5 @@
 
-from keras.preprocessing import image as im
-
+import keras.utils as im
 import cv2
 import json
 import numpy as np
@@ -20,11 +19,9 @@ def classify(frame, face_detector, model):
 
     # Faces are detected more than 0 i.e not 0
     if len(detected_faces) > 0:
-        
         # x,y = x,y coordinates
         # w,h = width, height
         for (x, y, w, h) in detected_faces:
-            
             frame = cv2.rectangle(frame, (x, y), (x + w, y + h), (255, 0, 0), 2)
             img = cv2.rectangle(gray, (x, y), (x + w, y + h), (255, 0, 0), 2)
 
@@ -56,7 +53,8 @@ def classify(frame, face_detector, model):
             
             cv2.putText(frame, label + " : " + str(confidence), (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
         
-    #cv2.imwrite("somefile.jpeg", frame)
+    cv2.imwrite("somefile.jpeg", frame)
 
     # output_json = json.dumps([face.__dict__ for face in face_prop])
     return face_prop
+
