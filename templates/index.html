@@ -53,11 +53,19 @@
           <video contrls id="videoElement" onloadeddata="adjustCanvas()"></video>
           <canvas id="captureCanvas"></canvas>
         </div>
-        <select id="microphones">
-          <option value="mic-1">mic-1</option>
-          <option value="mic-2">mic-2</option>
-          <option value="mic-3">mic-3</option>
-        </select>
+        <form action="{{url_for('select_mic')}}" method="post"></form>
+          <select name="mic" id="mic">
+          
+            {% for thing in mic_list %}
+              
+              <option value="{{thing}}">{{thing}}</option>
+            {% endfor %}  
+          
+            
+
+          </select>
+          <button type='submit'>Select Mic</button>
+        </form>
       </div>
 
     </div>    

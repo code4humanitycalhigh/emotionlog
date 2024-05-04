@@ -50,6 +50,7 @@ def record(index):
         data = stream.read(chunk)
         frames.append(data)
         if go==0:
+            
             break
 
 
